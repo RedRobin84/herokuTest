@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <ul>
+        <li><a href="/?name=@ViewData["foxName"]">Information</a></li>
+        <li><a href="/nutritionStore?name=@ViewData["foxName"]">Nutrition Store</a></li>
+        <li><a href="/trickCenter?name=@ViewData["foxName"]">Trick Center</a></li>
+        <li><a href="/foxDatabase">Database of Foxes</a></li>
+    </ul>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

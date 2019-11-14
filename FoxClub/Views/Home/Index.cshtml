@@ -1,0 +1,35 @@
+﻿@using FoxClub.Models;
+
+@model Fox
+
+
+
+@{
+ViewData["foxName"] = Model.Name;
+Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Index Page</title>
+</head>
+<body>
+    <img src="~/assets/greenfox.png" />
+    @if (@Model != null)
+    {
+        <p>This is @Model.Name. Curently living on @Model.Food and @Model.Drink. He knows @Model.ListOfTricks.Count() tricks.</p>
+        <h1>Known tricks</h1>
+        <ul>
+            @foreach (var trick in @Model.ListOfTricks)
+            {
+                <li>@trick</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>There are no Foxes at the moment. Register one <a href="/login">here</a>.</p>
+    }
+</body>
+</html>
+

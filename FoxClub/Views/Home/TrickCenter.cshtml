@@ -1,0 +1,36 @@
+﻿@model FoxClub.Models.Fox;
+
+@{ 
+    ViewData["foxName"] = Model.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+        <title>Trick Center</title>
+    </head>
+    <body>@if (Model.ListOfTricks.Count() == ViewBag.NumberOfTricks)
+    {
+        <p id="msg">@Model.Name know all tricks!</p>
+    }
+    else
+    {
+        <form action="/TrickCenter" method="post">
+            <label for="tricks">Tricks: </label>
+            <select id ="trick" name="trick">
+                @foreach (var trick in ViewBag.Tricks)
+                {
+                    if (!Model.HasTrick(trick))
+                    {
+                        <option>@trick;</option>
+                    }
+                }
+            </select>
+            <input type="hidden" name="name" value="@Model.Name" />
+            <button type="submit">Learn</button>
+        </form>
+    }
+    </body>
+    </html>
+

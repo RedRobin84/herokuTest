@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29324.140
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankOfSimba", "BankOfSimba.csproj", "{8DD818C2-6C2F-46F6-B705-3E1074969A82}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxClub", "FoxClub.csproj", "{B7435947-44D3-472F-B9AD-DA43B6A4186B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8DD818C2-6C2F-46F6-B705-3E1074969A82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8DD818C2-6C2F-46F6-B705-3E1074969A82}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8DD818C2-6C2F-46F6-B705-3E1074969A82}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8DD818C2-6C2F-46F6-B705-3E1074969A82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7435947-44D3-472F-B9AD-DA43B6A4186B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7435947-44D3-472F-B9AD-DA43B6A4186B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7435947-44D3-472F-B9AD-DA43B6A4186B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7435947-44D3-472F-B9AD-DA43B6A4186B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {434A3C0F-8EAF-45FE-8FE2-E996A68735E6}
+		SolutionGuid = {D81F001A-7303-484C-A487-8216EAB2195E}
 	EndGlobalSection
 EndGlobal

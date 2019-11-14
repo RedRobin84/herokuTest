@@ -1,0 +1,34 @@
+﻿@using FoxClub.Models;
+@model Fox;
+
+@{
+    ViewData["foxName"] = Model.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Nutrition Store</title>
+    </head>
+    <body>
+        <form action="/nutritionStore" method="post">
+            <label for="food">Foods: </label>
+            <select id="food" name="food">
+                @foreach (var food in ViewBag.Foods)
+                {
+                    <option>@food</option>
+                }
+            </select>
+            <label for="drink">Drinks: </label>
+            <select id="drink" name="drink">
+                @foreach (var drink in ViewBag.Drinks)
+                {
+                    <option>@drink</option>
+                }
+            </select>
+            <input type="hidden" name="name" value="@Model.Name" />
+            <button type="submit">Change</button>
+        </form>
+    </body>
+    </html>
+

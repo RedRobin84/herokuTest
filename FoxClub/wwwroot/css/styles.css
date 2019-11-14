@@ -1,0 +1,11 @@
+﻿body {
+}
+
+#msg {
+    background-color: greenyellow;
+    color: chocolate;
+}
+#err {
+    background-color: indianred;
+    color: black;
+}

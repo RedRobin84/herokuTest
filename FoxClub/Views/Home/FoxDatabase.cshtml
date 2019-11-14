@@ -1,0 +1,48 @@
+﻿@using FoxClub.Models;
+@model List<Fox>;
+@{
+    //TODO: Store login information
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        th {
+            text-align: left;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <hr />
+    <h3>Foxes database:</h3>
+    <table style="width: 50%;">
+        <tr>
+            <th>Index</th>
+            <th>Name</th>
+            <th>Food</th>
+            <th>Drink</th>
+            <th>Tricks</th>
+        </tr>
+        @for (int i = 0; i < @Model.Count(); i++)
+        {
+            <tr>
+                <td>@i</td>
+                <td>@Model[i].Name</td>
+                <td>@Model[i].Food</td>
+                <td>@Model[i].Drink</td>
+                <td>
+                    @foreach (var trick in Model[i].ListOfTricks)
+                    {
+                        <text>@trick  </text>
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
+

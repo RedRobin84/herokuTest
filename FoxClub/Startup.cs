@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FoxClub.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BankOfSimba
+namespace FoxClub
 {
     public class Startup
     {
@@ -16,6 +17,7 @@ namespace BankOfSimba
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddSingleton<FoxService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -24,10 +26,9 @@ namespace BankOfSimba
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseStaticFiles();
+                app.UseMvc();
             }
-
-            app.UseMvc();
-            app.UseStaticFiles();
 
             app.Run(async (context) =>
             {
