@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FoxClub.Controllers
 {
-    [Route("/")]
     public class HomeController : Controller
     {
         FoxService foxservice;
@@ -19,7 +18,6 @@ namespace FoxClub.Controllers
         }
 
 
-        [HttpGet("/")]
         public IActionResult Index(string name)
         {
             if (foxservice.IsLogged(name))
